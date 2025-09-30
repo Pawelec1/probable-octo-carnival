@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 # === 1. Where to put your OpenRouter key ===
 #   Copy the key from OpenRouter and paste it here.
-OPENROUTER_KEY = "sk-YOURKEYHERE"
+OPENROUTER_KEY = "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"
 
 #   Pick one model (a cheap, free‑tier one):
-MODEL_ID = "mistralai/Mistral-7B-Instruct"
+MODEL_ID = "openai/gpt-oss-20b:free"
 
 @app.route("/llm", methods=["POST"])
 def forward():
@@ -44,4 +44,5 @@ def forward():
 
 # Run the web‑server when we launch the script.
 if __name__ == "__main__":
+
     app.run(host="0.0.0.0", port=8000)
